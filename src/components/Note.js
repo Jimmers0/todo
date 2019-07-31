@@ -1,11 +1,11 @@
 import React from 'react'
-import {remove} from '../actions/contacts.actions'
+import {remove} from '../actions/notes.actions'
 
 
 
 
 export default props => {
-    function deleteContact() {
+    function deleteNote() {
         remove(props.id)
 
 
@@ -14,7 +14,7 @@ export default props => {
     return (
                 <li>
                     <p>{props.name}</p>
-                    <p><button onClick={deleteContact}>delete</button></p>
+                    <p><button onClick={deleteNote}>delete</button></p>
                     <input type="checkbox" value="false"/>
                 </li>
 

@@ -1,16 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import Contact from './Contact'
+import Note from './Note'
 
 export default props => {
-    const contacts = useSelector(appState => appState.contacts)
+    const notes = useSelector(appState => appState.notes)
 
 
     return (
        <div>
            <ul>
-               {contacts.map((contact, i) => (
-                  <Contact key={'contact' + i}  {...contact}/>
+               {notes.map((note, i) => (
+                  <Note key={'note' + i}  {...note}/>
 
                ))}
                 

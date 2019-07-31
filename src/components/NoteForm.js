@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { generateContact, create } from '../actions/contacts.actions';
+import { generateNote, create } from '../actions/notes.actions';
 
 export default props => {
     const [name,setName] = useState('')
@@ -8,7 +8,7 @@ export default props => {
     function createNote(e) {
         e.preventDefault()
         create(name)
-        generateContact()
+        generateNote()
 
 
     }
