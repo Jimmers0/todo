@@ -1,2 +1,210 @@
-html {box-sizing:border-box;}
-*, *::before, *::after {box-sizing:inherit;}
+
+
+.header {
+    width: 500px;
+    margin: auto;
+    
+}
+
+.createnote {
+    margin-left: 150px;
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    color: white;
+    border: 3px solid black;
+    background-color: black;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+ .enternote::placeholder {
+    text-align: center;
+    font-size: 20px;
+}
+
+.notescontainer {
+    width: 1200px;
+    margin:auto;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+body {
+    background-image: url('cork.jpg');
+    background-position: initial;
+    background-size: contain;
+    background-attachment: fixed;
+    
+}
+
+.note{
+    height:250px;
+    width: 250px;
+    background: yellow;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    background-color: #ffff99;
+    background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 25px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 1200px;
+    
+}
+
+.noteinput {
+    height: 200px;
+    width: 243px;
+    outline: 0;
+    background: transparent;
+    border: 0px;
+    color: black;
+    resize: none;
+    
+}
+
+.options {
+    display: flex;
+    width: 250px;
+    margin-bottom: 21px;
+}
+
+.enternote {
+    height: 50px;
+    width: 500px;
+    border: 4px solid black;
+    background-color: #ffff99;
+    outline: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    
+
+}
+
+.remainingtask{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+/* 
+.items li {
+    display:flex;
+    align-items:center; 
+    height:50px;
+    border-bottom:1px solid #d8d8d8;
+  } */
+
+/* .items li input {
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 300;
+} */
+
+/* .items input[type=checkbox] {
+    display: none;
+}
+
+.items input[type=checkbox]:checked ~ .replace i {
+  
+}
+
+.replace {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    
+}
+
+.replace i {
+    display:none;
+    line-height:34px;
+  }
+
+  .items input[type=checkbox]:checked ~ .replace i {
+    
+    color:green;
+  }
+
+.replace i {
+    display: none;
+} */
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: black;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

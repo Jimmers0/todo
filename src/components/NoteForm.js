@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import { generateNote, create } from '../actions/notes.actions';
+// import React, { useState } from 'react'
+// import { generateNote, create } from '../actions/notes.actions';
 
-export default props => {
-    const [name,setName] = useState('')
+// export default props => {
+//     const [name,setName] = useState('')
     
 
-    function createNote(e) {
-        e.preventDefault()
-        create(name)
-        generateNote()
+//     function createNote(e) {
+//         e.preventDefault()
+//         create(name)
+//         generateNote()
 
 
-    }
+//     }
 
     
-    return (
-        <form>
-            <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder=" note"/>
-            <button onClick={createNote}>make note</button>
-        </form>
-    )
-}
+//     return (
+//         <form>
+//             <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder=" note"/>
+//             <button onClick={createNote}>make note</button>
+//         </form>
+//     )
+// }

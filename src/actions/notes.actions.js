@@ -1,5 +1,5 @@
 import store from '../store'
-import axios from 'axios' 
+
 
 let id = 1
 
@@ -17,8 +17,19 @@ export function generateNote() {
   export function create(name){
       store.dispatch({
         type: 'ADD_NOTE',
-        payload: {name, id}
+        payload: {name, id, checked: false}
       })
+  }
+
+  export function modifyNote(note) {
+    store.dispatch({
+      type: 'MODIFY_NOTE',
+      payload: {
+        id: note.id,
+        name: note.name,
+        checked: note.checked
+      }
+    })
   }
 
 
