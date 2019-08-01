@@ -1,11 +1,7 @@
 import store from '../store'
 
-
 let id = 1
 
-export function generateNote() {
-    id++
-}
 
   export function remove(id) {
     store.dispatch({
@@ -14,19 +10,25 @@ export function generateNote() {
     })
   }
 
-  export function create(name){
+  export function create(note){
+    console.log('note', note)
       store.dispatch({
         type: 'ADD_NOTE',
-        payload: {name, id, checked: false}
+        payload: {
+          value: note, 
+          id: id, 
+          checked: false
+        }
       })
+      id++
   }
 
   export function modifyNote(note) {
     store.dispatch({
       type: 'MODIFY_NOTE',
       payload: {
+        value: note.value,
         id: note.id,
-        name: note.name,
         checked: note.checked
       }
     })
